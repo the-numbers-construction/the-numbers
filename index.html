@@ -1,14 +1,84 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <title>Site under maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Under Maintenance - The Numbers</title>
+    <meta name="description" content="The Numbers is temporarily under maintenance. We'll be back soon with all your movie data!">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Under Maintenance - The Numbers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://opusdata.com">
+    <meta property="og:description" content="The Numbers is temporarily under maintenance. We'll be back soon!">
+    <meta property="og:site_name" content="The Numbers">
+    <meta property="og:image" content="https://opusdata.com/images/logo_2021/PNG-large/thenumbers-logo-vertical-gradient-lg.png">
+    <meta property="og:image:width" content="941">
+    <meta property="og:image:height" content="317">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MovieNumbers">
+    <meta name="twitter:title" content="Under Maintenance - The Numbers">
+    <meta name="twitter:description" content="The Numbers is temporarily under maintenance. We'll be back soon!">
+    <meta name="twitter:image" content="https://opusdata.com/images/logo_2021/PNG/thenumbers-logo-mark-gradient.png">
+    
+    <!-- CDN Styles (same as your PHP) -->
+    <link href="https://code.jquery.com/jquery-3.3.1.min.js" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" rel="stylesheet">
+    <link href="/resources/font-awesome/css/all.min.css" rel="stylesheet">
+    
     <style>
-      body { font-family: sans-serif; text-align:center; padding-top:10%; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #B3181D 0%, #8B0000 100%); min-height: 100vh; }
+        .maintenance-container { max-width: 600px; margin: 0 auto; padding: 40px 20px; text-align: center; color: white; }
+        .logo { width: 300px; max-width: 90vw; height: auto; margin-bottom: 30px; }
+        .maintenance-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; }
+        .maintenance-text { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.95; }
+        .social-links { margin: 30px 0; }
+        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 0 10px; background: rgba(255,255,255,0.2); border-radius: 50%; color: white; text-decoration: none; transition: all 0.3s ease; }
+        .social-links a:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+        .search-form { max-width: 400px; margin: 30px auto; }
+        .search-form input { height: 50px; border-radius: 25px; border: none; padding: 0 20px; font-size: 16px; width: 100%; }
+        @media (max-width: 768px) { .maintenance-title { font-size: 2rem; } .maintenance-text { font-size: 1.1rem; } }
     </style>
-  </head>
-  <body>
-    <h1>We’ll be back soon</h1>
-    <p>Our site is currently undergoing maintenance. Please check back later.</p>
-  </body>
+</head>
+<body>
+    <div class="maintenance-container">
+        <!-- Logo -->
+        <img src="/images/logo_2021/SVG/numbers-logo-r.svg" alt="The Numbers - Where Data and Movies Meet" class="logo" onerror="this.src='https://www.the-numbers.com/images/logo_2021/SVG/numbers-logo-r.svg'">
+        
+        <!-- Maintenance Message -->
+        <h1 class="maintenance-title">🚧 Under Maintenance</h1>
+        <p class="maintenance-text">We're updating our movie data systems to bring you even better box office insights. We'll be back online shortly!</p>
+        
+        <!-- Social Media Links (from your PHP) -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/TheNumbers" target="_blank" title="Facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com/MovieNumbers" target="_blank" title="Twitter" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/thenumbersmoviedata/" target="_blank" title="Instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.threads.net/@thenumbersmoviedata" target="_blank" title="Threads" aria-label="Threads">
+                <i class="fab fa-threads"></i>
+            </a>
+        </div>
+        
+        <!-- Search (static version) -->
+        <form class="search-form" action="https://opusdata.com/custom-search" method="get">
+            <input type="text" name="searchterm" placeholder="Search movies when we're back..." maxlength="100" disabled style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);">
+            <small style="opacity: 0.8; margin-top: 10px; display: block;">Search will be available when we're back online</small>
+        </form>
+        
+        <p style="margin-top: 40px; opacity: 0.8; font-size: 0.9rem;">© The Numbers - Where Data and Movies Meet</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
 </html>
